@@ -1,0 +1,27 @@
+bright-room.internal {
+    hosts {
+        172.22.10.1     gateway.bright-room.internal ntp.bright-room.internal dns.bright-room.internal
+        172.22.10.80    external.bright-room.internal s3.bright-room.internal vault.bright-room.internal
+        172.22.10.60    node1.bright-room.internal
+        172.22.10.61    node2.bright-room.internal
+        172.22.10.62    node3.bright-room.internal
+        172.22.10.70    node4.bright-room.internal
+        172.22.10.71    node5.bright-room.internal
+        172.22.10.72    node6.bright-room.internal
+        172.22.10.100   monitoring.bright-room.internal
+    }
+    etcd {
+        path /skydns
+        endpoint http://localhost:2379
+    }
+    cache
+    errors
+    log
+}
+
+. {
+    forward . 8.8.8.8:53 8.8.4.4:53
+    cache
+    errors
+    log
+}

@@ -1,0 +1,21 @@
+services:
+  chrony:
+    extends:
+      file: services/chrony.yaml
+      service: chrony
+  coredns:
+    extends:
+      file: services/coredns.yaml
+      service: coredns
+  etcd:
+    extends:
+      file: services/etcd.yaml
+      service: etcd
+  isc-dhcp:
+    extends:
+      file: services/isc-dhcp.yaml
+      service: isc-dhcp
+
+volumes:
+  etcd-data:
+    driver: local
