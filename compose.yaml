@@ -15,10 +15,10 @@ services:
     extends:
       file: services/isc-dhcp.yaml
       service: isc-dhcp
-  cloudflared:
+  cloudflared_ssh:
     extends:
       file: services/cloudflared.yaml
-      service: cloudflared
+      service: cloudflared_ssh
 
 volumes:
   etcd-data:

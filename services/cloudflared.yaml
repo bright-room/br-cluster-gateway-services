@@ -1,8 +1,8 @@
 services:
-  cloudflared:
+  cloudflared_ssh:
     image: cloudflare/cloudflared:latest
-    container_name: cloudflared
-    hostname: cloudflared
+    container_name: cloudflared_ssh
+    hostname: cloudflared_ssh
     environment:
       TUNNEL_TOKEN: ${CLOUDFLARED_SSH_TUNNEL_TOKEN}
     network_mode: "host"
