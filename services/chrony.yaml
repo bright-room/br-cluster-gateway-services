@@ -1,7 +1,7 @@
 services:
   chrony:
     build:
-      context: .
+      context: ./chrony
     container_name: chrony
     hostname: chrony
     environment:

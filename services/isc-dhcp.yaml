@@ -1,7 +1,7 @@
 services:
   isc-dhcp:
     build:
-      context: .
+      context: ./isc-dhcp
     container_name: isc-dhcp
     hostname: isc-dhcp
     volumes:
