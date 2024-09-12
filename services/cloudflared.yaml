@@ -1,0 +1,8 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARED_SSH_TUNNEL_TOKEN}
+    network_mode: "host"
+    command: tunnel run
+    restart: always
