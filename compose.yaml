@@ -21,7 +21,7 @@ services:
       service: cloudflared_ssh
   haproxy:
     extends:
-      file: services/haproxy.yml
+      file: services/haproxy.yaml
       service: haproxy
 
 volumes:
