@@ -19,6 +19,10 @@ services:
     extends:
       file: services/cloudflared.yaml
       service: cloudflared_ssh
+  haproxy:
+    extends:
+      file: services/haproxy.yml
+      service: haproxy
 
 volumes:
   etcd-data:
