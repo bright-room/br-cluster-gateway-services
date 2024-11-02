@@ -2,21 +2,26 @@
     cache
     errors
     loop
+    health :1053
+}
+
+bright-room.internal:53 {
+    hosts {
+        172.22.10.1     gateway1.bright-room.internal ntp1.bright-room.internal dns1.bright-room.internal
+        172.22.10.2     gateway2.bright-room.internal ntp2.bright-room.internal dns2.bright-room.internal
+        172.22.10.80    external.bright-room.internal s3.bright-room.internal vault.bright-room.internal
+        172.22.10.60    node1.bright-room.internal
+        172.22.10.61    node2.bright-room.internal
+        172.22.10.62    node3.bright-room.internal
+        172.22.10.70    node4.bright-room.internal
+        172.22.10.71    node5.bright-room.internal
+        172.22.10.72    node6.bright-room.internal
+    }
+    import common
 }
 
 bright-room.net:53 {
-    hosts {
-        172.22.10.1     gateway1.bright-room.net ntp1.bright-room.net dns1.bright-room.net
-        172.22.10.2     gateway2.bright-room.net ntp2.bright-room.net dns2.bright-room.net
-        172.22.10.80    external.bright-room.net s3.bright-room.net vault.bright-room.net
-        172.22.10.60    node1.bright-room.net
-        172.22.10.61    node2.bright-room.net
-        172.22.10.62    node3.bright-room.net
-        172.22.10.70    node4.bright-room.net
-        172.22.10.71    node5.bright-room.net
-        172.22.10.72    node6.bright-room.net
-    }
-    etcd {
+    etcd bright-room.net {
         path /skydns
         endpoint http://localhost:2379
     }
