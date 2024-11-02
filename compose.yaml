@@ -1,27 +1,27 @@
 services:
   chrony:
     extends:
-      file: services/chrony.yaml
+      file: docker/chrony.yaml
       service: chrony
   coredns:
     extends:
-      file: services/coredns.yaml
+      file: docker/coredns.yaml
       service: coredns
   etcd:
     extends:
-      file: services/etcd.yaml
+      file: docker/etcd.yaml
       service: etcd
   isc-dhcp:
     extends:
-      file: services/isc-dhcp.yaml
+      file: docker/isc-dhcp.yaml
       service: isc-dhcp
   cloudflared_ssh:
     extends:
-      file: services/cloudflared.yaml
+      file: docker/cloudflared.yaml
       service: cloudflared_ssh
   haproxy:
     extends:
-      file: services/haproxy.yaml
+      file: docker/haproxy.yaml
       service: haproxy
 
 volumes:
