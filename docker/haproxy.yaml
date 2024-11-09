@@ -5,3 +5,4 @@ services:
     container_name: haproxy
     hostname: haproxy
     network_mode: "host"
+    restart: always

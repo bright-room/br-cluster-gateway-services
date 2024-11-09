@@ -22,3 +22,4 @@ services:
       "--logger=zap",
       "--log-outputs=stderr"
     ]
+    restart: always
